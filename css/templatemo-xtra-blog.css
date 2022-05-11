@@ -17,7 +17,7 @@ body {
     overflow-x: hidden;
 }
 
-p, span { color: #999; }
+p, span { color: rgb(66, 65, 65); }
 hr { 
     border-top-color: #CCC; 
     margin-top: 10px;
