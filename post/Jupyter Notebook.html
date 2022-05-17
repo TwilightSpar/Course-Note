@@ -1657,11 +1657,11 @@ https://templatemo.com/tm-553-xtra-blog
                             <i class="fas fa-pen"></i>
                             Statistical Ptn recognition
                         </a></li>
-                    <li class="tm-nav-item active"><a href="GitSetup.html" class="tm-nav-link">
+                    <li class="tm-nav-item"><a href="GitSetup.html" class="tm-nav-link">
                             <i class="fas fa-pen"></i>
                             GitHub Setup
                         </a></li>
-                    <li class="tm-nav-item"><a href="Jupyter Notebook.html" class="tm-nav-link">
+                    <li class="tm-nav-item active"><a href="Jupyter Notebook.html" class="tm-nav-link">
                             <i class="fas fa-pen"></i>
                             Fastest way to open .ipynb
                         </a></li>
@@ -1690,230 +1690,140 @@ https://templatemo.com/tm-553-xtra-blog
         <main class="tm-main">
             <div class='typora-export-content'>
                 <div id='write' class=''>
-                    <h1 id='git-and-github-command-demo'><span>Git and GitHub command demo</span></h1>
-                    <h2 id='by-creating-a-git-repository-you-have-two-ways'><span>By creating a git repository, you have
-                            two
-                            ways</span></h2>
-                    <ul>
-                        <li><span>create on your local computer, </span><code>git init</code></li>
-                        <li><span>clone a repository from GitHub, </span><code>git clone</code></li>
-                    </ul>
-                    <p>&nbsp;</p>
-                    <p><code>git init</code></p>
-                    <p><span>Output:</span></p>
-                    <blockquote>
-                        <p><span>Initialized empty Git repository in C:/Users/GitHubSetUpDemp/.git/</span></p>
-                    </blockquote>
-                    <p>&nbsp;</p>
-                    <p><code>git clone https://github.com/TwilightSpar/GitHubSetUpDemo.git</code></p>
-                    <p><span>If you are using </span><code>git init</code><span>, you will need to connect your branch
-                            to the
-                            remote one on GitHub</span></p>
-                    <figure>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th style='text-align:center;'><span>local</span></th>
-                                    <th style='text-align:center;'><span>origin(GitHub)</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style='text-align:center;'><span>main</span></td>
-                                    <td style='text-align:center;'><span>origin/[BranchName(default: main)]</span></td>
-                                </tr>
-                                <tr>
-                                    <td style='text-align:center;'><span>brach_1_local</span></td>
-                                    <td style='text-align:center;'><span>branch_1_remote</span></td>
-                                </tr>
-                                <tr>
-                                    <td style='text-align:center;'><span>brach_1_local_new</span></td>
-                                    <td style='text-align:center;'><span>brach_1_remote_new</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </figure>
-                    <p><span>origin is a remote repository name, you can name it to &quot;GitHub&quot; or anything,
-                            default is
-                            origin </span></p>
-                            <p><span>origin repository has the url of </span><a href='https://github.com/' target='_blank'
-                            class='url'>https://github.com/</a><span> [username] / [RepoName]</span>
+                    <h2 id='create-and-open-jupyter-notebook-on-windows-through-right-click-menu'><span>Create and Open
+                            Jupyter
+                            Notebook on Windows through right click menu</span></h2>
+                    <h3 id='problem'><span>Problem:</span></h3>
+                    <p><span>How did you open Jupyter Notebook? How did you launch an exist Notebook? Here is what I did
+                            before
+                            (pretty annoying):</span></p>
+                    <p><span>open anaconda navigation:</span></p>
+                    <p><img src="../img/anaconda.png" referrerpolicy="no-referrer" alt="anaconda"></p>
+                    <p><span>find the file in the path:</span></p>
+                    <p><img src="../img/find.png" alt="find path" style="zoom:67%;" /></p>
+                    <p><span>If I need to create a new file, I need to open an exist file then create a new one:</span>
                     </p>
-                    <p><span>First, use </span><code>git config –global user.name &quot;[name]&quot;</code><span>
-                        </span></p>
-                    <p><span>and </span><code>git config –global user.email &quot;[email address]&quot;</code><span> to
-                            login
-                            to your GitHub account</span>
+                    <p><img src="../img/create newfile old.png" alt="create new old" style="zoom:67%;" /></p>
+                    <p><span>Is there a faster way to open an exist notebook file, and create a new one. Just like
+                            create a new
+                            word file and open it?</span></p>
+                    <p><img src="../img/Right Click Menu.png" alt="right click" style="zoom:50%;" /></p>
+                    <h3 id='open-an-existing-notebook'><span>Open an existing Notebook</span></h3>
+                    <p><span>Actually, we can open the Notebook, with some cmd commands.</span></p>
+                    <p><span>First run </span><code>cwp.py</code><span> to set path to anaconda environment
+                            directory:</span>
                     </p>
-                    <p><span>Then, use to </span><code>git remote add origin [Remote Server Link]</code><span>, to
-                            connect your
-                            local repository to the remote server</span></p>
-                    <p><span>Now you can see, the GitHub have the origin repository:</span></p>
-                    <p><code>git remote</code></p>
-                    <p><span>Output:</span></p>
                     <blockquote>
-                        <p><span>origin</span></p>
+                        <p><span>python cwp.py [path]</span></p>
+                        <p><span>Ex: C:\anaconda3\python.exe C:\anaconda3\cwp.py C:\anaconda3\envs\CAMenv </span></p>
                     </blockquote>
-                    <p><span>Then, use </span><code>git push -u &lt;remote-branch&gt;</code><span> to update the remote
-                            branch
-                        </span></p>
-                    <h2 id='make-changes'><span>Make changes</span></h2>
-                    <p><span>This picture(<a href="https://fabacademy.org/2018/labs/fablabyachay/students/enriquedavid-ariasmoscoso/projectmanagement.html">fabacademy</a>) explains all basic files change commands</span></p>
-                    <img src="../img/zBb51.png"
-                        alt="git process" style="zoom: 50%;" />
-                    <p><span>First, we create a file and commit the changes. We can use </span><code>status</code><span>
-                            and
-                        </span><code>diff</code><span> to shows the file changes and differences which are not yet
-                            staged.</span></p>
-                    <h4 id='create-new-file-and-write-sth'><span>create new file and write sth</span></h4>
-                    <p><code>echo change 1 &gt; filename.txt</code></p>
-                    <h4 id='show-difference'><span>show difference</span></h4>
-                    <p><code>git diff</code></p>
-                    <p><span>Output:</span></p>
+                    <p><span>Then use </span><code>jupyter-notebook-script.py</code><span> to open the file. Change
+                        </span><code>[CAMenv]</code><span> to your environment.</span></p>
                     <blockquote>
-                        <p><span>diff --git a/demo.ipynb b/demo.ipynb</span></p>
-                        <p> <span>index 353a544..500fea0 100644</span></p>
-                        <p> <span>--- a/demo.ipynb</span></p>
-                        <p> <span>+++ b/demo.ipynb</span>
-                        </p>
+                        <p><span>[in CAMenv environment]python jupyter-notebook-script.py %1</span></p>
+                        <p><span>Ex: C:\anaconda3\envs\CAMenv\python.exe
+                                C:\anaconda3\envs\CAMenv\Scripts\jupyter-notebook-script.py %1</span></p>
                     </blockquote>
-                    <h4 id='stage-the-changes'><span>stage the changes</span></h4>
-                    <p><code>git add .</code></p>
-                    <h4 id='commit-the-changes'><span>commit the changes</span></h4>
-                    <p><code>git commit -m &quot;commit 1&quot;</code></p>
-                    <h4 id='stash-changes'><span>Stash changes</span></h4>
-                    <p><span>When you want to record the current state of the working directory and the index, but want
-                            to go
-                            back to a clean working directory. The </span><code>stash</code><span> command saves your
-                            local
-                            modifications away and reverts the working directory to match the HEAD commit.</span></p>
-                    <p><code>echo change 2 &gt; filename2.txt</code>
-                        <code>git add .</code>
-                        <code>git status</code>
-                    </p>
-                    <p><span>output:</span></p>
+                    <p><span>So now, we can put these two command into a </span><code>.txt</code><span> file,and change
+                            the
+                            extension to `.bat``</span></p>
+                    <p><img src="../img/jupyterOpenFile.png" referrerpolicy="no-referrer" alt="open"></p>
+                    <p><span>find a notebook and use this batch file to open it.</span></p>
+                    <p><img src="../img/openwith.png" alt="openwith" style="zoom: 67%;" /></p>
+                    <p><span>Now you can open the </span><code>.ipynb</code><span> file with double click.</span></p>
+                    <h3 id='create-a-new-notebook-in-right-click-menu'><span>Create a new Notebook in right click
+                            menu</span>
+                    </h3>
+                    <p><span>The idea comes from </span><a
+                            href='[python - How to create and open a jupyter notebook ipynb file directly from terminal - Stack Overflow](https://stackoverflow.com/questions/48946639/how-to-create-and-open-a-jupyter-notebook-ipynb-file-directly-from-terminal)'><span>this
+                                link</span></a><span>. However this link is for Linux system. We will first write a
+                            python file
+                            to create the notebook for us.</span></p>
                     <blockquote>
-                        <p><span>Changes to be committed:</span></p>
-                        <p> <span>(use &quot;git restore --staged </span></p>
-                        <p>
-                            <file><span>...&quot; to unstage)</span>
-                        </p>
-                        <p> <span> new file: filename2.txt</span>
-                        </p>
-                    </blockquote>
-                    <p><span>Now use </span><code>stash</code><span>, this will save all uncommitted file into some
-                            where else,
-                            give you a clean working directory</span></p>
-                    <p><span>output:</span></p>
-                    <blockquote>
-                        <p><code>nothing to commit, working tree clean</code></p>
-                    </blockquote>
-                    <p><span>If we want to get back the stashed files:</span></p>
-                    <p><code>git stash apply</code><span> will give back the changes, but the stashed file still
-                            saved.</span>
-                        <span>we can use </span><code>git stash drop</code><span> to drop the stashed files</span>
-                        <code>git stash pop</code><span> = </span><code>git stash apply</code><span> +
-                        </span><code>git stash drop</code>
-                    </p>
-                    <h2 id='branch-basic'><span>Branch basic </span></h2>
-                    <h4 id='see-local-branches'><span>see local branches</span></h4>
-                    <p><code>git branch</code><span> </span></p>
-                    <p><span>Output:</span></p>
-                    <blockquote>
-                        <p><span>*</span><span> master</span></p>
-                    </blockquote>
-                    <h4 id='create-new-branch-and-switch-to-it'><span>create new branch and switch to it</span></h4>
-                    <p><code>git checkout -b branch_1_local</code><span> </span></p>
-                    <p><code>git branch</code></p>
-                    <p><span>Output:</span></p>
-                    <blockquote>
-                        <p><span>*</span><span> branch_1_local</span></p>
-                        <p> <span>master</span>
-                        </p>
-                    </blockquote>
-                    <h4 id='push-changes'><span>push changes</span></h4>
-                    <p><span>Now I create a new branch and am in branch_1_local. To push these change to GitHub
-                            run:</span></p>
-                    <p><code>git branch -r</code><span> # -r see remote branch</span></p>
-                    <p><code>git push -u origin branch_1_local:branch_1_remote</code></p>
-                    <p><span>Output:</span></p>
-                    <blockquote>
-                        <p><span>remote: Resolving deltas: 100% (1/1), done.</span></p>
-                        <p><span>To </span><a href='https://github.com/TwilightSpar/GitHubSetUpDemo' target='_blank'
-                                class='url'>https://github.com/TwilightSpar/GitHubSetUpDemo</a><span> </span></p>
-                        <p><span>*</span><span> [new branch] branch_1_local -&gt; branch_1_remote</span></p>
-                        <span>branch &#39;branch_1_local&#39; set up to track &#39;origin/branch_1_remote&#39;.</span>
-                        </p>
-                    </blockquote>
-                    <p><span>because GitHub does not have branch_1_remote, so it will create a new branch</span></p>
-                    <p><span>now on my GitHub repository, there is a new branch named
-                        </span><code>branch_1_remote</code></p>
-                    <h4 id='-r-see-remote-branch'><span>-r see remote branch</span></h4>
-                    <p><code>git branch -r</code><span> </span></p>
-                    <p><span>Output:</span></p>
-                    <blockquote>
-                        <p><span>origin/branch_1_remote</span></p>
-                    </blockquote>
-                    <h4 id='change-branch-name'><span>change branch name</span></h4>
-                    <p><code>git branch --move branch_1_local branch_1_local_new</code><span> </span></p>
-                    <h4 id='push-new-branch-to-origin'><span>push new branch to origin</span></h4>
-                    <p><code>git push -u origin branch_1_local_new:branch_1_remote_new</code><span> </span>
-                        <span> </span>
-                    </p>
-                    <h4 id='delete-old-remote-branch'><span>delete old remote branch</span></h4>
-                    <p><code>git push origin --delete branch_1_remote</code></p>
-                    <p><span>Output:</span></p>
-                    <blockquote>
-                        <p><span>To </span><a href='https://github.com/TwilightSpar/GitHubSetUpDemo' target='_blank'
-                                class='url'>https://github.com/TwilightSpar/GitHubSetUpDemo</a><span> </span></p>
-                        <p><span>-</span><span> [deleted] branch_1_remote</span>
-                        </p>
-                    </blockquote>
-                    <p><code>git branch -r</code><span> # -r see remote branch</span></p>
-                    <p><span>Output:</span></p>
-                    <blockquote>
-                        <p><span>origin/branch_1_remote_new </span>
-                            <span>origin/master</span>
-                        </p>
-                    </blockquote>
-                    <h4 id='to-delete-local-branch-use'><span>To delete local branch use:</span></h4>
-                    <ul>
-                        <li><code>git branch -d my-branch-name</code><span>, only deletes the branch if it has already
-                                been
-                                merged</span></li>
-                        <li><code>git branch -D my-branch-name</code><span>, force delete</span></li>
-                    </ul>
-                    <h2 id='merge-branch'><span>merge branch</span></h2>
-                    <p><span>suppose we want to merge branch </span><code>branch_1_local_new</code><span> into
-                        </span><code>main</code> </p>
-                    <p><span>first we need to stay in </span><code>main</code><span> branch</span>
-                    </p>
-                    <h4 id='lets-make-new-changes-to-branch-1-and-commit-it'><span>Let&#39;s make new changes to branch
-                            1 and
-                            commit it.</span></h4>
-                    <p><code>echo change 3 on branch 1 new &gt; filename3.txt</code></p>
-                    <p> <code>git add .</code></p>
-                    <p><code>git commit -m &quot;commit 1 on branch new&quot;</code></p>
-                    <h4 id='change-to-main-branch'><span>change to main branch </span></h4>
-                    <p><code>git checkout master</code></p>
-                    <h4 id='merge'><span>merge </span></h4>
-                    <p><code>git merge branch_1_local_new</code></p>
-                    <p><span>Output:</span></p>
-                    <blockquote>
-                        <p> <span>Updating c52fbcc..4f41d58 </span></p>
-                        <p> <span>Fast-forward </span></p>
-                        <p> <span>demo.ipynb | 148 +++++++++++++++++++++++++++++----------------------------- </span>
-                        </p>
-                        <p> <span>filename3.txt | 1 + </span></p>
-                        <p> <span>2 files changed, 75 insertions(+), 74 deletions(-) </span></p>
-                        <p> <span>create mode 100644 filename3.txt </span></p>
-                    </blockquote>
-                    <p>&nbsp;</p>
+                        <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="py"
+                            style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="py"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51875px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;">
+                <div class="CodeMirror-measure"></div>
+                <div class="CodeMirror-code" role="presentation" style="">
 
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string">"""create-notebook.py</span></span></pre>
+
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string"> &nbsp; Creates a minimal jupyter notebook (.ipynb)</span></span></pre>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string"> &nbsp; Usage: create-notebook &lt;notebook&gt;</span></span></pre>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string">"""</span></span></pre>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-variable">sys</span></span></pre>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">from</span> <span class="cm-variable">notebook</span> <span class="cm-keyword">import</span> <span class="cm-variable">transutils</span> <span class="cm-keyword">as</span> <span class="cm-variable">_</span></span></pre>
+                    <div class="" style="position: relative;">
+                        <pre class=" CodeMirror-line "
+                            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">from</span> <span class="cm-variable">notebook</span>.<span class="cm-property">services</span>.<span class="cm-property">contents</span>.<span class="cm-property">filemanager</span> <span class="cm-keyword">import</span> <span class="cm-variable">FileContentsManager</span> <span class="cm-keyword">as</span> <span class="cm-variable">FCM</span></span></pre>
+                    </div>
+                    <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+        </span></span></pre>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">try</span>:</span></pre>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">notebook_fname</span> <span class="cm-operator">=</span> <span class="cm-variable">sys</span>.<span class="cm-property">argv</span>[<span class="cm-number">1</span>].<span class="cm-property">strip</span>(<span class="cm-string">'.ipynb'</span>)</span></pre>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">except</span> <span class="cm-variable">IndexError</span>:</span></pre>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-builtin">print</span>(<span class="cm-string">"Usage: create-notebook &lt;notebook&gt;"</span>)</span></pre>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">exit</span>()</span></pre>
+                    <div class="" style="position: relative;">
+                        <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+        </span></span></pre>
+                    </div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">notebook_fname</span> <span class="cm-operator">+=</span> <span class="cm-string">'.ipynb'</span> &nbsp;<span class="cm-comment"># ensure .ipynb suffix is added</span></span></pre>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">FCM</span>().<span class="cm-property">new</span>(<span class="cm-variable">path</span><span class="cm-operator">=</span><span class="cm-variable">notebook_fname</span>)</span></pre>
                 </div>
             </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 369px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 369px;"></div>
+    </div>
+    </div>
+    </pre>
+    </blockquote>
+    <p>&nbsp;</p>
+    <p><span>This file will accept an argument as the filename. The usage is
+        </span><code>python create-notebook.py Newnotebook</code></p>
+    <p><span>Now we will create a batch file (name it </span><code>create_new_notebook.bat</code><span>), Change
+        </span><code>[CAMenv]</code><span> to your environment:</span></p>
+    <blockquote>
+        <p><span>conda activate CAMenv &amp; python.exe C:\create-notebook.py new_notebook</span></p>
+    </blockquote>
+    <p>&nbsp;</p>
+    <p><strong><span>Potential warning:</span></strong><span> Some python virtual environment make not support this
+            line:
+        </span><code>from notebook.services.contents.filemanager import FileContentsManager as FCM</code><span>. I
+            choose to run this file in my </span><code>conda</code><span> environment, so run
+        </span><code>conda activate CAMenv</code><span> command first.</span></p>
+    <h5 id='interpretation'><span>Interpretation:</span></h5>
+    <p><span> </span><code>&amp;</code><span> in batch file means run the next command after finish the former one.
+            Suppose the create-notebook.py file is under </span><code>C:\</code><span> drive, and the environment is
+        </span><code>CAMenv</code><span>.</span></p>
+    <h5 id='add-to-right-click-menu'><span>Add to Right Click Menu:</span></h5>
+    <p><span>To open the file in Right Click Menu, we need to change the registry file. Open
+        </span><code>Registry editor</code><span> in windows. Search this path and add
+        </span><code>New Jupyter Notebook</code><span> key and </span><code>command</code><span> subkey.
+            Change</span><code>command</code><span> subkey value to the path you put the </span><code>.bat</code><span>
+            file.</span></p>
+    <p><img src="../img/regit.png" referrerpolicy="no-referrer" alt="regit"></p>
+    <p><span>Now you should see a new option in the Right Click Menu:</span></p>
+    <p><img src="../img/Right Click Menu.png" alt="right click" style="zoom:50%;" /></p>
+    </div>
+    </div>
 
-        </main>
+    </main>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/templatemo-script.js"></script>
