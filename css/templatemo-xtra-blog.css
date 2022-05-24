@@ -152,9 +152,7 @@ ul {
     transition: all 0.3s ease;
 }
 
-.tm-social-link:hover .tm-social-icon.fa-facebook { color: #3b5998; }
-.tm-social-link:hover .tm-social-icon.fa-twitter { color: #00acee; }
-.tm-social-link:hover .tm-social-icon.fa-instagram { color: #3f729b; }
+.tm-social-link:hover .tm-social-icon.fa-github { color: #3b5998; }
 .tm-social-link:hover .tm-social-icon.fa-linkedin { color: #0e76a8; }
 .navbar-toggler { display: none; }
 
